@@ -38,6 +38,11 @@
             lblTotalGeneral = new Label();
             lblMozoResultado = new Label();
             txtTotalGeneral = new TextBox();
+            colMozos = new DataGridViewTextBoxColumn();
+            colComida = new DataGridViewTextBoxColumn();
+            colBebidaSin = new DataGridViewTextBoxColumn();
+            colBebidas = new DataGridViewTextBoxColumn();
+            colPostres = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
             SuspendLayout();
             // 
@@ -46,6 +51,7 @@
             dgvVentas.AllowUserToAddRows = false;
             dgvVentas.AllowUserToDeleteRows = false;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { colMozos, colComida, colBebidaSin, colBebidas, colPostres });
             dgvVentas.Location = new Point(21, 43);
             dgvVentas.Name = "dgvVentas";
             dgvVentas.Size = new Size(521, 256);
@@ -131,6 +137,32 @@
             txtTotalGeneral.Size = new Size(100, 23);
             txtTotalGeneral.TabIndex = 9;
             // 
+            // colMozos
+            // 
+            colMozos.HeaderText = "Mozos";
+            colMozos.Name = "colMozos";
+            colMozos.ReadOnly = true;
+            // 
+            // colComida
+            // 
+            colComida.HeaderText = "Comida";
+            colComida.Name = "colComida";
+            // 
+            // colBebidaSin
+            // 
+            colBebidaSin.HeaderText = "Bebida sin alcohol";
+            colBebidaSin.Name = "colBebidaSin";
+            // 
+            // colBebidas
+            // 
+            colBebidas.HeaderText = "Bebidas";
+            colBebidas.Name = "colBebidas";
+            // 
+            // colPostres
+            // 
+            colPostres.HeaderText = "Postres";
+            colPostres.Name = "colPostres";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -165,5 +197,10 @@
         private Label lblTotalGeneral;
         private Label lblMozoResultado;
         private TextBox txtTotalGeneral;
+        private DataGridViewTextBoxColumn colMozos;
+        private DataGridViewTextBoxColumn colComida;
+        private DataGridViewTextBoxColumn colBebidaSin;
+        private DataGridViewTextBoxColumn colBebidas;
+        private DataGridViewTextBoxColumn colPostres;
     }
 }
